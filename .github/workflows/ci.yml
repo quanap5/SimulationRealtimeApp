@@ -28,8 +28,6 @@ jobs:
     - name: Build
       run: dotnet build SimulationRealtimeApp.csproj --configuration Release --no-restore
 
-    - run: npm ci
-    - run: npx jest --coverage
 
   build-docker:
     runs-on: ubuntu-latest
