@@ -1,0 +1,41 @@
+# Build output
+**/bin/
+**/obj/
+**/out/
+**/publish/
+
+# IDE files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Test results
+**/TestResults/
+**/coverage/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+
+# Database files (should be externalized)
+*.db
+*.db-shm
+*.db-wal
+
+# Local development files
+*.local
+.env
+.env.*
+
+# Misc
+*.log
+Thumbs.db
+.DS_Store
