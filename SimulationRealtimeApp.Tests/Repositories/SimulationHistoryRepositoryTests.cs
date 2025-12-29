@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using SimulationRealtimeApp.Models;
 using SimulationRealtimeApp.Repositories;
-using SimulationRealtimeApp.Tests.Helpers;
 using Xunit;
 
 namespace SimulationRealtimeApp.Tests.Repositories
@@ -16,9 +15,9 @@ namespace SimulationRealtimeApp.Tests.Repositories
 
         public SimulationHistoryRepositoryTests()
         {
-            _context = TestDbContextFactory.Create();
-            _loggerMock = new Mock<ILogger<SimulationHistoryRepository>>();
-            _sut = new SimulationHistoryRepository(_context, _loggerMock.Object);
+            //_context = TestDbContextFactory.Create();
+            //_loggerMock = new Mock<ILogger<SimulationHistoryRepository>>();
+            //_sut = new SimulationHistoryRepository(_context, _loggerMock.Object);
         }
 
         public void Dispose()

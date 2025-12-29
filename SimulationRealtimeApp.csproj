@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="SimulationRealtimeApp.Tests\**" />
-    <Content Remove="SimulationRealtimeApp.Tests\**" />
-    <EmbeddedResource Remove="SimulationRealtimeApp.Tests\**" />
-    <None Remove="SimulationRealtimeApp.Tests\**" />
+    <None Include="SimulationRealtimeApp.Tests\SimulationRealtimeApp.Tests.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +22,10 @@
     <PackageReference Include="NPOI" Version="2.7.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
     <PackageReference Include="xunit.extensibility.core" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="SimulationRealtimeApp.Tests\Helpers\" />
   </ItemGroup>
 
 </Project>
