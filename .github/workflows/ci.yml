@@ -23,10 +23,10 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Restore dependencies
-      run: dotnet restore SimulationRealtimeApp/SimulationRealtimeApp.csproj
+      run: dotnet restore SimulationRealtimeApp.csproj
 
     - name: Build
-      run: dotnet build SimulationRealtimeApp/SimulationRealtimeApp.csproj --configuration Release --no-restore
+      run: dotnet build SimulationRealtimeApp.csproj --configuration Release --no-restore
 
   build-docker:
     runs-on: ubuntu-latest
@@ -64,10 +64,10 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Restore dependencies
-      run: dotnet restore SimulationRealtimeApp/SimulationRealtimeApp.csproj
+      run: dotnet restore SimulationRealtimeApp.csproj
 
     - name: Publish
-      run: dotnet publish SimulationRealtimeApp/SimulationRealtimeApp.csproj --configuration Release --output ./publish
+      run: dotnet publish SimulationRealtimeApp.csproj --configuration Release --output ./publish
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4

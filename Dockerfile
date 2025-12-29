@@ -3,12 +3,11 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copy project files and restore dependencies
-COPY SimulationRealtimeApp/SimulationRealtimeApp.csproj SimulationRealtimeApp/
-RUN dotnet restore SimulationRealtimeApp/SimulationRealtimeApp.csproj
+COPY SimulationRealtimeApp.csproj .
+RUN dotnet restore SimulationRealtimeApp.csproj
 
 # Copy source code and build
-COPY SimulationRealtimeApp/ SimulationRealtimeApp/
-WORKDIR /src/SimulationRealtimeApp
+COPY . .
 RUN dotnet build -c Release -o /app/build
 
 # Publish stage
